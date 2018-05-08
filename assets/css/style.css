@@ -17,3 +17,13 @@ main {
 #policy {
 	text-align: center;
 }
+
+/* ------------ */
+/* Validate.php */
+/* ------------ */
+
+
+#mail_avail,
+#user_avail {
+	color: red;
+}

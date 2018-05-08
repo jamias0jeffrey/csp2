@@ -66,7 +66,7 @@
                 <ul class="navbar-nav mr-auto">
  
                     <?php
-                        if (!isset($_SESSION['user'])) {
+                        if (!isset($_SESSION['current_user'])) {
                             echo '
 
                                 <li class="nav-item">
@@ -81,19 +81,16 @@
 
                                 <!-- Dropdown -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <?php
-                                            if(isset($_SESSION["user"])){
-                                                echo $_SESSION["user"];
-                                            }
-                                        ?>
-                                    </a>
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
+                                        .$_SESSION['current_user'].
+                                            
+                                    '</a>
 
                                     <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                                         <a class="dropdown-item" href="#">Manage Account</a>
                                         <a class="dropdown-item" href="#">Orders</a>
                                         <a class="dropdown-item" href="#">Wishlist</a>
-                                        <a class="dropdown-item" href="./partials/session_logout.php">Logout</a>
+                                        <a class="dropdown-item" href="./lib/session_logout.php">Logout</a>
                                     </div>
                                 </li>
 

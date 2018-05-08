@@ -5,7 +5,7 @@
         <div class="modal-content">
            <div class="container" id="loginform">
                 <div class="card-block">
-                    <form action="./partials/login_validation.php" method="POST">
+                    <form action="./lib/login_user.php" method="POST">
                         <!--Header-->
                         <div class="text-center">
                             <h3><i class="fa fa-lock"></i> Login:</h3>
@@ -15,18 +15,19 @@
                         <!--Body-->
                         <div class="md-form">
                             <i class="fa fa-envelope prefix"></i>
-                            <input type="text" id="usr-name" class="form-control" name="username">
-                            <label for="usr-name">Enter Username/Email</label>
+                            <input type="text" id="login_username" class="form-control" name="login_username" required>
+                            <label for="login_username">Enter Username/Email</label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-lock prefix"></i>
-                            <input type="password" id="pass" class="form-control" name="password">
-                            <label for="pass">Enter Passowrd</label>
+                            <input type="password" id="login_password" class="form-control" name="login_password" required>
+                            <label for="login_password">Enter Passowrd</label>
                         </div>
 
                         <div class="text-center">
-                            <button class="btn btn-primary">Login</button>
+                            <span id="errormsg"></span>
+                            <button type="submit" class="btn btn-primary">Login</button>
                         </div>
 
                         <!--Footer-->

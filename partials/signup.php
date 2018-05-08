@@ -4,31 +4,31 @@
            <div class="container" id="loginform">
                 <div class="card-block">
                     
-                    <form>
+                    <form action="./lib/create_user.php" method="POST" id=signupform>
                         <p class="h4 text-center mb-4">Sign up</p>
 
                         <div class="md-form">
                             <i class="fa fa-user prefix grey-text"></i>
-                            <input type="text" id="materialFormRegisterNameEx" class="form-control">
-                            <label for="materialFormRegisterNameEx">Your name</label>
+                            <input type="text" id="username" class="form-control" name="username" required>
+                            <label for="username">Your name</label><span id="user_avail"></span>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-envelope prefix grey-text"></i>
-                            <input type="email" id="materialFormRegisterEmailEx" class="form-control">
-                            <label for="materialFormRegisterEmailEx">Your email</label>
-                        </div>
-
-                        <div class="md-form">
-                            <i class="fa fa-exclamation-triangle prefix grey-text"></i>
-                            <input type="email" id="materialFormRegisterConfirmEx" class="form-control">
-                            <label for="materialFormRegisterConfirmEx">Confirm your email</label>
+                            <input type="email" id="useremail" class="form-control" name="usermail" required>
+                            <label for="useremail">Your email</label><span id="mail_avail"></span>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-lock prefix grey-text"></i>
-                            <input type="password" id="materialFormRegisterPasswordEx" class="form-control">
-                            <label for="materialFormRegisterPasswordEx">Your password</label>
+                            <input type="password" id="userpassword" class="form-control" name="userpassword" required>
+                            <label for="userpassword">Your password</label><span id="pwlength"></span>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+                            <input type="password" id="confirmpassword" class="form-control" name="confirmpassword" required>
+                            <label for="confirmpassword">Confirm password</label><span id="match"></span>
                         </div>
 
                         <div class="form-check">
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="text-center mt-4">
-                            <button class="btn btn-primary" type="submit">Sign Up</button>
+                            <button class="btn btn-primary" type="submit" id="signup">Sign Up</button>
                         </div>
                         <div class="md=form" id="policy">
                             <p>By clicking "Sign Up" I agree to <span><a href="#">Pure Tech policy.</a></span></p>
@@ -51,3 +51,5 @@
         </div>
     </div>
 </div>
+
+
