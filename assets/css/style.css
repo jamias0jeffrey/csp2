@@ -27,3 +27,22 @@ main {
 #user_avail {
 	color: red;
 }
+
+/* ------------ */
+/* products.php */
+/* ------------ */
+
+.wrapper {
+	background-color: white;
+	width: 80%;
+	margin: 0 auto;
+	min-height: 100vh;
+	padding: 5px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 5px;
+}
