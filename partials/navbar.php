@@ -1,4 +1,7 @@
 
+
+
+
 <!--Navbar 1-->
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
 
@@ -87,7 +90,7 @@
                                     '</a>
 
                                     <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Manage Account</a>
+                                        <a class="dropdown-item" href="./account_details.php">Manage Account</a>
                                         <a class="dropdown-item" href="#">Orders</a>
                                         <a class="dropdown-item" href="#">Wishlist</a>
                                         <a class="dropdown-item" href="./lib/session_logout.php">Logout</a>

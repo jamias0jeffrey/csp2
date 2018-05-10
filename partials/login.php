@@ -27,6 +27,9 @@
 
                         <div class="text-center">
                             <span id="errormsg"></span>
+                        </div>
+
+                        <div class="text-center">
                             <button type="submit" class="btn btn-primary">Login</button>
                         </div>
 

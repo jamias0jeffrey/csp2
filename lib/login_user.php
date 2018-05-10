@@ -4,8 +4,8 @@
 
 	require_once "connect.php";                                     
 
-	$uname = $_POST['login_username'];
-	$pword = sha1($_POST['login_password']);
+	$uname =  $_POST['login_username'];
+	$pword =  sha1($_POST['login_password']);
 
 	$query = "SELECT * FROM users WHERE username = '$uname' AND password = '$pword'";
 	$result = mysqli_query($conn, $query);

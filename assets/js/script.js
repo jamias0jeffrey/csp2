@@ -1,9 +1,13 @@
 $(document).ready(function(){
 
+	// ****** //
+	// signup //
+	// ****** //
+
 	$('#signup').prop("disabled", true);
 	
 
-	$('#username').on("blur", function(){
+	$('#username').on("keyup", function(){
 		var username = $(this).val();
 
 		$.ajax({
@@ -17,7 +21,7 @@ $(document).ready(function(){
 	});
 
 
-	$('#useremail').on("blur", function(){
+	$('#useremail').on("keyup", function(){
 		var email = $(this).val();
 
 		$.ajax({
@@ -88,6 +92,31 @@ $(document).ready(function(){
 
 	});
 
+
+	// ******* //
+	// profile //
+	// ******* //
+
+	$("#profile_update").on("click", function(){
+		var profile_fullname = $("#profile_fullname").val();
+		var profile_username = $("#profile_username").val();
+		var profile_email = $("#profile_email").val();
+		var profile_password = $("#profile_password").val();
+
+		console.log(profile_fullname);
+		console.log(profile_username);
+		console.log(profile_email);
+		console.log(profile_password);
+		
+		$.ajax({
+			url: "./lib/get_user_info.php",
+			method: "POST",
+			data: {"profile_fullname":profile_fullname,"profile_username":profile_username,"profile_email":profile_email,"profile_password":profile_password},
+			success: function(data){
+				$("#update_successful").html(data);
+			}
+		});
+	});
 
 
 });
