@@ -66,7 +66,11 @@
 		    </div>
 
 		    <div class="text-center mt-4">
-		        <button class="btn btn-primary" type="submit" id="profile_update" ">Update</button>
+		        <button class="btn btn-primary" type="submit" id="profile_update">Update</button>
+		    </div>
+
+		    <div class="text-center mt-4">
+		    	<button class="btn btn-primary" type="submit" id="profile_deactivate">Deactivate</button>
 		    </div>
 
 		<!-- Material form register -->
