@@ -8,15 +8,27 @@
                         <p class="h4 text-center mb-4">Sign up</p>
 
                         <div class="md-form">
+                            <i class="fas fa-user-ninja prefix grey-text"></i>
+                            <input type="text" id="userfullname" class="form-control" name="userfullname" required>
+                            <label for="userfullname">Enter your full name</label>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="far fa-address-card prefix grey-text"></i>
+                            <input type="text" id="useraddress" class="form-control" name="useraddress" required>
+                            <label for="useraddress">Enter your address</label>
+                        </div>
+
+                        <div class="md-form">
                             <i class="fa fa-user prefix grey-text"></i>
                             <input type="text" id="username" class="form-control" name="username" required>
-                            <label for="username">Your name</label><span id="user_avail"></span>
+                            <label for="username">Enter desire username</label><span id="user_avail"></span>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-envelope prefix grey-text"></i>
-                            <input type="email" id="useremail" class="form-control" name="usermail" required>
-                            <label for="useremail">Your email</label><span id="mail_avail"></span>
+                            <input type="email" id="useremail" class="form-control" name="useremail" required>
+                            <label for="useremail">Enter your email</label><span id="mail_avail"></span>
                         </div>
 
                         <div class="md-form">

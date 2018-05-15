@@ -70,10 +70,14 @@ $(document).ready(function(){
 		}
 	});
 
-	$("#signupform div input").on("keydown", function(e){
-		if (e.which === 32)
-			return false;
-	});
+	// $("#signupform div input").on("keydown", function(e){
+	// 	if (e.which === 32)
+	// 		return false;
+	// });
+
+	// ***** //
+	// login //
+	// ***** //
 
 	$("#login_username, #login_passowrd").on("keyup", function(){
 
@@ -97,23 +101,24 @@ $(document).ready(function(){
 	// profile //
 	// ******* //
 
-	$("#profile_update").on("click", function(){
+	// $('#profile_fullname, #profile_username, #profile_useraddress, #profile_email').prop("disabled", true);
+
+	// $('#edit').on('click', function(){
+	// 	$('#profile_fullname, #profile_username, #profile_useraddress, #profile_email').attr("readonly", false);
+	// });
+
+	$("#save").on("click", function(){
 		var profile_fullname = $("#profile_fullname").val();
+		var profile_useraddress = $("#profile_useraddress").val();
 		var profile_username = $("#profile_username").val();
 		var profile_email = $("#profile_email").val();
-		var profile_password = $("#profile_password").val();
-
-		console.log(profile_fullname);
-		console.log(profile_username);
-		console.log(profile_email);
-		console.log(profile_password);
 		
 		$.ajax({
-			url: "./lib/get_user_info.php",
+			url: "./lib/update_user_info.php",
 			method: "POST",
-			data: {"profile_fullname":profile_fullname,"profile_username":profile_username,"profile_email":profile_email,"profile_password":profile_password},
+			data: {"profile_fullname":profile_fullname,"profile_useraddress":profile_useraddress, "profile_username":profile_username,"profile_email":profile_email},
 			success: function(data){
-				$("#update_successful").html(data);
+				alert ("Profile saved");
 			}
 		});
 	});

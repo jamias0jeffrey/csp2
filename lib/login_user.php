@@ -13,6 +13,7 @@
 	foreach ($result as $row) {
 		$_SESSION['current_user'] = $row['username'];
 	}
+	
 	header("Location: ../index.php")
 
 ?>

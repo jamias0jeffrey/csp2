@@ -5,7 +5,7 @@
 $hostname = 'localhost';
 $username = 'root';
 $password = '';
-$db_name = 'puretech';
+$db_name = 'puretechdb';
 
 //Create a connection to DB
 $conn = mysqli_connect($hostname, $username, $password, $db_name);
