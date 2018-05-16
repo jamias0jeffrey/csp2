@@ -3,7 +3,7 @@
 	session_start();
 
 	function getTitle(){
-		echo "Profile Page";
+		echo "Update Product Page";
 	}
 
 	require_once "./lib/connect.php";
@@ -18,16 +18,17 @@
 
 		<?php if (isset($_GET['id'])) {
 			$item_id = $_GET['id'];
-			$update_sql = "SELECT up.product_name, up.description, up.price, up.category, up.image FROM items as up WHERE up.id = '$item_id'";
-			$updateitem = mysqli_query($conn, $update_sql) or die (mysqli_error($conn));
+			$update_sql = "SELECT * FROM items as up WHERE up.id = '$item_id'";
+			$update_item = mysqli_query($conn, $update_sql) or die (mysqli_error($conn));
 		}
 
-			foreach ($updateitem as $up_item) {
+
+			foreach ($update_item as $up_item) {
 
 	?>
 
 	<div class="container">
-			<form>
+			<form data-itemid="<?=$item_id?>" id='formitemid'>
 			    <p class="h4 text-center mb-4">Update product info</p>
 
 			    <div class="md-form">
@@ -37,7 +38,7 @@
 
 			    <div class="md-form">
 	                <h5 for="description">Description:</h5>
-	                <input type="text" id="description" class="form-control" value="<?php echo $up_item['description'] ?>">
+	                <textarea id="description" class="form-control" rows="18"><?php echo $up_item['description']?></textarea>
 	            </div>
 
 			    <div class="md-form">
@@ -49,14 +50,17 @@
 			        <h5 for="category">Category</h5>
 			        <input type="text" id="category" class="form-control" value="<?php echo $up_item['category'] ?>">
 			    </div>
+
+			    <div class="text-left mt-2">
+			        <a class="btn btn-primary" type="submit" href="update_products.php?id='.$id.'">Save</a>
+			    </div>
 			    
 			</form>
-			    <div class="text-left mt-2">
-			        <button class="btn btn-primary" type="submit" id="updateitem">Save</button>
-			    </div>
 
 		</div>
 
 	<?php
 		}
 	?>
+
+<?php require_once "./partials/tail.php"; ?>
