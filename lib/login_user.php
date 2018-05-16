@@ -10,10 +10,26 @@
 	$query = "SELECT * FROM users WHERE username = '$uname' AND password = '$pword'";
 	$result = mysqli_query($conn, $query);
 
-	foreach ($result as $row) {
-		$_SESSION['current_user'] = $row['username'];
+
+	$rows = mysqli_fetch_array($result);
+
+	if ($rows['user_status'] == 1){
+
+		if($rows['user_role'] == 'admin') {
+			foreach ($result as $row) {
+				$_SESSION['current_user'] = $row['username'];
+			}
+			header('Location: ../admin_page.php');
+		} else {
+			foreach ($result as $row) {
+				$_SESSION['current_user'] = $row['username'];
+			}
+			header('Location: ../index.php');
+		} 
+	} else {
+		echo "Account is deactivated";
 	}
 	
-	header("Location: ../index.php")
+
 
 ?>

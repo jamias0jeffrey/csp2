@@ -21,7 +21,7 @@
 
 
 	<?php
-		include "partials/navbar.php";
+		include "partials/admin_navbar.php";
 	?>
 
 	<main id="wrapperCart">
@@ -40,19 +40,13 @@
 					extract($item);
 
 					echo '
-
-					
 						<div class="card">
 						  <img class="card-img-top" src="'.$image.'" alt="Card image cap">
 						  <div class="card-body">
 						    <h5 class="card-title">'.$product_name.'</h5>
-						    <p class="card-text">'.$description.'</p>
-						    <p class="card-text">'.$stock.'</p>
 						    <a href="item.php?id='.$id.'" class="btn btn-primary">View Details</a>
 						  </div>
 						</div>
-						
-
 					';
 				}
 			?>

@@ -56,9 +56,7 @@
 			        <label for="profile_email">Email Address</label>
 			        <input type="email" id="profile_email" class="form-control" value="<?php echo $user_col['user_email'] ?>">
 			    </div>
-
-
-
+			    
 			    <div class="text-left mt-2">
 			        <button class="btn btn-primary" type="submit" id="save">Update</button>
 			    </div>
