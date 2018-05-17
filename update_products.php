@@ -41,14 +41,6 @@
 			        <input type="text" id="product_name" name="product_name" class="form-control" value="<?php echo $up_item['product_name'] ?>">
 			    </div>
 
-			    <div>
-			    	<form action="./lib/uploading.php" method="POST" enctype="multipart/form-data">
-			    		<h5>Select Image:</h5>
-			    		<input type="file" name="upload" id="upload">
-			    		<!-- <input type="submit" value="Upload Image" name="submit"> -->
-			    	</form>
-			    </div>
-
 			    <div class="md-form">
 	                <h5 for="description">Description:</h5>
 	                <textarea id="description" name="description" class="form-control" rows="18"><?php echo $up_item['description']?></textarea>
