@@ -128,23 +128,24 @@ $(document).ready(function(){
 	// Items //
 	// ***** //	
 
-	$("#updateitem").on("click", function()){
-		var product_productname = $('#product_name').val();
-		var product_description = $('#description').val();
-		var product_price = $('#price').val();
-		var product_category = $('#category').val();
-		var item_id = $('#formitemid').data('itemid');
+	// $("#updateitem").on("click", function()){
+	// 	var product_id = $('#product_id').val();
+	// 	var product_productname = $('#product_name').val();
+	// 	var product_description = $('#description').val();
+	// 	var product_price = $('#price').val();
+	// 	var product_category = $('#category').val();
+	// 	// var item_id = $('#formitemid').data('itemid');
 
 
-		$.ajax ({
-			url: "./lib/update_product_info.php",
-			method: "POST",
-			data: {"itemid":item_id,"product_productname":product_productname,"product_description":product_description,"product_price":product_price,"product_category":product_category}
-			success: function(data){
-				alert ("Product Updated");
-			}
-		});
-	}
+	// 	$.ajax ({
+	// 		url: "./lib/update_product_info.php",
+	// 		method: "POST",
+	// 		data: {"product_id":product_id,"product_productname":product_productname,"product_description":product_description,"product_price":product_price,"product_category":product_category}
+	// 		success: function(data){
+	// 			alert ("Product Updated");
+	// 		}
+	// 	});
+	// });
 	
 });
 

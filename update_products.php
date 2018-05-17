@@ -28,31 +28,44 @@
 	?>
 
 	<div class="container">
-			<form data-itemid="<?=$item_id?>" id='formitemid'>
+			<form action="./lib/update_product_info.php" method="POST">
 			    <p class="h4 text-center mb-4">Update product info</p>
+
+			    <div class="md-form" hidden>
+			        <h5>Item id:</h5>
+			        <input type="text" id="product_id" name="product_id" class="form-control" value="<?php echo $up_item['id'] ?>" readonly>
+			    </div>
 
 			    <div class="md-form">
 			        <h5>Product Name:</h5>
-			        <input type="text" id="product_name" class="form-control" value="<?php echo $up_item['product_name'] ?>">
+			        <input type="text" id="product_name" name="product_name" class="form-control" value="<?php echo $up_item['product_name'] ?>">
+			    </div>
+
+			    <div>
+			    	<form action="./lib/uploading.php" method="POST" enctype="multipart/form-data">
+			    		<h5>Select Image:</h5>
+			    		<input type="file" name="upload" id="upload">
+			    		<!-- <input type="submit" value="Upload Image" name="submit"> -->
+			    	</form>
 			    </div>
 
 			    <div class="md-form">
 	                <h5 for="description">Description:</h5>
-	                <textarea id="description" class="form-control" rows="18"><?php echo $up_item['description']?></textarea>
+	                <textarea id="description" name="description" class="form-control" rows="18"><?php echo $up_item['description']?></textarea>
 	            </div>
 
 			    <div class="md-form">
 			        <h5 for="price">Price</h5>
-			        <input type="text" id="price" class="form-control" value="<?php echo $up_item['price'] ?>">
+			        <input type="text" id="price" name="price" class="form-control" value="<?php echo $up_item['price'] ?>">
 			    </div>
 
 			    <div class="md-form">
 			        <h5 for="category">Category</h5>
-			        <input type="text" id="category" class="form-control" value="<?php echo $up_item['category'] ?>">
+			        <input type="text" id="category" name="category" class="form-control" value="<?php echo $up_item['category'] ?>">
 			    </div>
 
 			    <div class="text-left mt-2">
-			        <a class="btn btn-primary" type="submit" href="update_products.php?id='.$id.'">Save</a>
+			        <button class="btn btn-primary" type="submit" id="updateitem">Save</button>
 			    </div>
 			    
 			</form>
@@ -62,5 +75,6 @@
 	<?php
 		}
 	?>
+
 
 <?php require_once "./partials/tail.php"; ?>
