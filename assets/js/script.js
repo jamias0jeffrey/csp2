@@ -79,7 +79,7 @@ $(document).ready(function(){
 	// login //
 	// ***** //
 
-	$("#login_username, #login_passowrd").on("blur", function(){
+	$("#login_username,#login_passowrd").on("keyup", function(){
 
 		var login_username = $("#login_username").val();
 		var login_password = $("#login_password").val();

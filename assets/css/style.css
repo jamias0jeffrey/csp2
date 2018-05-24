@@ -32,9 +32,9 @@ main {
 /* products.php */
 /* ------------ */
 
-.wrapper {
+#wrapperCart {
 	background-color: white;
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	min-height: 100vh;
 	padding: 5px;
@@ -42,7 +42,23 @@ main {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto;
-	grid-gap: 5px;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: 10px;
+}
+
+
+
+/* ------------------ */
+/* admin_products.php */
+/* ------------------ */
+
+#prd_list {
+	height: 50px;
+	width: 50px;
+}
+
+
+#add_category {
+	width: 100px;
 }

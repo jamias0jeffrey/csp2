@@ -28,7 +28,7 @@
 	?>
 
 	<div class="container">
-			<form action="./lib/update_product_info.php" method="POST">
+			<form action="./lib/update_product_info.php" method="POST" enctype="multipart/form-data">
 			    <p class="h4 text-center mb-4">Update product info</p>
 
 			    <div class="md-form" hidden>
@@ -56,8 +56,13 @@
 			        <input type="text" id="category" name="category" class="form-control" value="<?php echo $up_item['category'] ?>">
 			    </div>
 
+			    <div class="md-form">
+			    	<h5 for="up_image">Image</h5>
+			    	<input type="file" id="up_image" name="up_image">
+			    </div>
+
 			    <div class="text-left mt-2">
-			        <button class="btn btn-primary" type="submit" id="updateitem">Save</button>
+			        <button class="btn btn-primary" type="submit" name="updateitem" id="updateitem">Save</button>
 			    </div>
 			    
 			</form>

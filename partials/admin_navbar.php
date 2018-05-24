@@ -15,7 +15,7 @@
             </li>
 
             <li class="nav-item partner-links">
-                <a class="nav-link partner-links" href="#">Pure Ganics</a>
+                <a class="nav-link partner-links" href="#">Pure Scents</a>
             </li>
 
             <li class="nav-item partner-links">
@@ -56,6 +56,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./admin_products.php">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./admin_add_item.php">Add Product</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./admin_users.php">Users</a>

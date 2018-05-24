@@ -31,7 +31,7 @@
 			else  
 			{  
 				echo '<script>alert("Item Already Added")</script>';  
-				echo '<script>window.location="products.php"</script>';  
+				echo '<script>window.location="admin_products1.php"</script>';  
 			}  
 		}  
 		else  
@@ -80,7 +80,7 @@
 			if(mysqli_num_rows($result) > 0) {  
 				while($row = mysqli_fetch_array($result)) {  
 					?>  
-					<form method="post" action="products.php?action=add&id=<?php echo $row["id"]; ?>">  
+					<form method="post" action="admin_products1.php?action=add&id=<?php echo $row["id"]; ?>">  
 						<div class="card-deck">  
 							<div class="card mb-4">
 								<div class="view overlay">
@@ -91,30 +91,7 @@
 										<input type="text" name="quantity" class="form-control" value="1">  
 										<input type="hidden" name="hidden_name" value="<?php echo $row["product_name"]; ?>">
 										<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
-										<a type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $row["id"];?>">Details</a>
 										<input type="submit" name="add_to_cart" class="btn btn-primary" value="Add to Cart">  
-
-					<div id="<?php echo $row["id"];?>" class="modal fade" role="dialog">
-						<div class="modal-dialog">
-							
-							<div class="modal-content">
-
-								<div class="modal-header">
-									<h5 class="modal-title"><?php echo $row["product_name"]; ?></h5>
-								</div>
-
-								<div class="modal-body">
-									<p><?php echo $row["description"]; ?></p>
-								</div>
-
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-								</div>
-								
-							</div>
-
-						</div>
-					</div>
 									</div>
 								</div>
 							</div>
