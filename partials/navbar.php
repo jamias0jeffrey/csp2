@@ -16,7 +16,7 @@
             </li>
 
             <li class="nav-item partner-links">
-                <a class="nav-link partner-links" href="#">Pure Ganics</a>
+                <a class="nav-link partner-links" href="#">Pure Scents</a>
             </li>
 
             <li class="nav-item partner-links">

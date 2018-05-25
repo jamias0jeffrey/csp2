@@ -20,7 +20,7 @@
 	$cat_result = mysqli_query($conn, $cat_sql);
 	// var_dump($cat_result);
 
-	$item_cat_sql = "SELECT it.id, it.product_name, it.description, it.price, ic.category_name, it.image FROM items AS it JOIN item_categories AS ic ON it.category=ic.id WHERE it.category = ic.category_name";
+	$item_cat_sql = "SELECT it.id, it.product_name, it.description, it.price, ic.category_name, it.image FROM items AS it JOIN item_categories AS ic WHERE it.category = ic.id";
 	$item_cat_result = mysqli_query($conn, $item_cat_sql);
 
 ?>
@@ -123,18 +123,37 @@
 											<th> </th>
 										</tr>
 									</thead>
+								<tbody>
+								';
 
-									<tbody>
-										<tr>
-											
-										</tr>
-									</tbody>
+								$catID = $cat_val['id'];
+
+								$item_cat_sql1 = "SELECT * FROM items WHERE category = $catID";
+								$item_cat_result1 = mysqli_query($conn, $item_cat_sql1);
+
+								foreach ($item_cat_result1 as $item_ct_rst1) {
+
+								echo '
+								<tr>
+									<td>'.$item_ct_rst1['product_name'].'</td>
+									<td>'.$item_ct_rst1['description'].'</td>
+									<td>'.$item_ct_rst1['price'].'</td>
+									<td>'.$item_ct_rst1['category'].'</td>
+									<td><img id="prd_list" src="'.$item_ct_rst1['image'].'"></td> 
+									<td>
+										<a class="btn btn-primary" href="update_products.php?id='.$row['id'].'">Edit</a>
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete_conf">Delete</button>
+										</td>
+								</tr>';
+								}
+								
+								echo '</tbody>
 								</table>
-
 							</div>
 						';
 					}
 				?>
+				
 
 				
 
