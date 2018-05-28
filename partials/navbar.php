@@ -1,7 +1,3 @@
-
-
-
-
 <!--Navbar 1-->
 <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
 
@@ -59,7 +55,7 @@
                 <a class="nav-link" href="products.php">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="cart.php">Cart</a>
+                <a class="nav-link" href="cart.php"><span class="zzz">Cart</span></a>
             </li>
         </ul>
         <!-- Links -->

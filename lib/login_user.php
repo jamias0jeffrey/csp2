@@ -26,9 +26,9 @@
 			}
 			header('Location: ../index.php');
 		} 
-	} else {
+	} else if ($rows['user_status'] == 0){
 		echo "Account is deactivated";
-	}
+	} else 
 	
 
 

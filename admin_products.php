@@ -138,7 +138,7 @@
 									<td>'.$item_ct_rst1['product_name'].'</td>
 									<td>'.$item_ct_rst1['description'].'</td>
 									<td>'.$item_ct_rst1['price'].'</td>
-									<td>'.$item_ct_rst1['category'].'</td>
+									<td>'.$cat_val['category_name'].'</td>
 									<td><img id="prd_list" src="'.$item_ct_rst1['image'].'"></td> 
 									<td>
 										<a class="btn btn-primary" href="update_products.php?id='.$row['id'].'">Edit</a>
