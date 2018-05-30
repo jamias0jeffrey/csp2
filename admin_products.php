@@ -57,7 +57,7 @@
 			<div class="tab-content">
 
 				<div class="tab-pane fade in show active" id="all" role="tab-panel">
-					<table class="table table-bordered">
+					<table class="table table-bordered admin_product_table">
 						<thead>
 							<tr>
 								<th>Product Name</th>
@@ -112,7 +112,7 @@
 						echo '
 							<div class="tab-pane fade" id="'.$cat_val['category_name'].'" role="tab-panel">
 
-								<table class="table table-bordered">
+								<table class="table table-bordered admin_product_table">
 									<thead>
 										<tr>
 											<th>Product Name</th>

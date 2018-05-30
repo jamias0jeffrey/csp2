@@ -38,7 +38,7 @@
 							<div class="card-body">
 								<h5>'.$product_name.'</h5>
 								<p>P '.$price.'</p>
-								<input type="number" value="1" id="quantity'.$id.'"></input>
+								<input type="number" value="1" min="1" id="quantity'.$id.'"></input>
 							</div> 
 							<div class="card-footer">
 								<button class"btn btn-primary" onClick="addToCart('.$id.')">Add to cart</button>
@@ -50,12 +50,6 @@
 				}
 			?>
 		</div>
-
-<div class="card">
-  <div class="card-header">Header</div>
-  <div class="card-body">Content</div> 
-  <div class="card-footer">Footer</div>
-</div>
 			
 
 

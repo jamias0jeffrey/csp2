@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$('#admin_users').DataTable();
+
 	// ****** //
 	// signup //
 	// ****** //
@@ -191,8 +193,69 @@ function addToCart(itemId) {
 		method: "POST",
 		data: {"item_id":id, "item_quantity":quantity},
 		success: function(data){
-			alert ("item added to cart");
+			alert ("Item added to cart");
 			$('.zzz').html(data);
 		}
 	});
 }
+
+// Cart //
+
+
+function updateFromCart(cartId, price) {
+	var quantity1 = $('#qty'+cartId).val();
+	var total_sum = 0;
+
+
+	$.ajax({
+		url: "./lib/update_cart_quantity.php",
+		method: 'POST',
+		data: {'cartId':cartId, 'qty':quantity1},
+		success: function(data){
+			$('.puqty').val(data);
+		}
+	});
+
+	$.ajax ({
+		url: "./lib/update_subtotal.php",
+		method: "POST",
+		data: {"cartId":cartId, 
+				"cartQty":quantity1, 
+				"cartPrice":price},
+		success: function(data){
+			$('#subtotal'+cartId).html(data);
+
+			$('.subtotal').each(function(){
+
+			total_sum += parseInt(data);
+			});
+
+			total_sum = Number(total_sum).toLocaleString();
+
+			$('#cartTotalPrice').html(total_sum);
+		}
+	});
+}
+
+// 	$.ajax({
+// 		url: "./lib/update_total_quantity.php",
+// 		method: "POST";
+// 		data: {"cartItem_id":cart_id, 
+// 				"cartQty":cart_item_quantity, 
+// 				"cartPrice":cart_price},
+// 		success: function(data) {
+// 			$('#totalquantity').val(data);
+// 		}
+// 	});
+
+// 	$.ajax({
+// 		url: "./lib/update_cart_quantity.php",
+// 		method: "POST",
+// 		data: {"cartItem_id":cart_id, 
+// 				"cartQty":cart_item_quantity, 
+// 				"cartPrice":cart_price},
+// 		success: function(data) {
+// 			$('a[href="./cart.php"]').html(data);
+// 		}
+// 	});
+// }

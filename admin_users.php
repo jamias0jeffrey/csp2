@@ -30,7 +30,7 @@
 
 		<div class="container">
 
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="admin_users">
 				<thead>
 					<tr>
 						<th>Fullname</th>

@@ -62,3 +62,26 @@ main {
 #add_category {
 	width: 100px;
 }
+
+/* Cart Products */
+.upqty {
+	width: 100%;
+}
+
+
+table, th, td {
+	border: 1px solid black;
+}
+
+table {
+	width: 100%;
+}
+
+th {
+	text-align: center;
+	height: 50px;
+}
+
+td {
+	height: 50px;
+}
