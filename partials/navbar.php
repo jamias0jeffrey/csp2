@@ -55,7 +55,17 @@
                 <a class="nav-link" href="products.php">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="cart.php"><span class="zzz">Cart</span></a>
+                <?php
+                    if (isset($_SESSION['cart'])) {
+                        echo '
+                            <a class="nav-link" href="cart.php"><span class="zzz">Cart <strong style="color:lightgreen;">( '.$_SESSION['item_count'].' )</strong></span></a>
+                        ';
+                    } else {
+                        echo '
+                            <a class="nav-link" href="cart.php">Cart</a>
+                        ';
+                    }
+                ?>
             </li>
         </ul>
         <!-- Links -->

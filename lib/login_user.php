@@ -26,9 +26,17 @@
 			}
 			header('Location: ../index.php');
 		} 
-	} else if ($rows['user_status'] == 0){
-		echo "Account is deactivated";
-	} else 
+	} else if ($rows == 0){
+		echo '
+			<h2>Incorrect details</h2>
+			<button onclick="history.go(-1);">Back</button>
+		';
+	} else {
+		echo '
+			<h1>Account is deactivated</h1>
+			<button onclick="history.go(-1);">Back </button>
+		';
+	}
 	
 
 

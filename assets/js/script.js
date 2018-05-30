@@ -81,22 +81,24 @@ $(document).ready(function(){
 	// login //
 	// ***** //
 
-	$("#login_username,#login_passowrd").on("keyup", function(){
+	
 
-		var login_username = $("#login_username").val();
-		var login_password = $("#login_password").val();
+	// $("#login_username,#login_passowrd").on("keyup", function(){
 
-		$.ajax({
-			url:"./lib/login_validation.php",
-			method: "POST",
-			data: {"login_username" : login_username, "login_password" : login_password},
-			success: function(data){
-				$("#errormsg").html(data);
-			}
+	// 	var login_username = $("#login_username").val();
+	// 	var login_password = $("#login_password").val();
 
-		});
+	// 	$.ajax({
+	// 		url:"./lib/login_validation.php",
+	// 		method: "POST",
+	// 		data: {"login_username" : login_username, "login_password" : login_password},
+	// 		success: function(data){
+	// 			$("#errormsg").html(data);
+	// 		}
 
-	});
+	// 	});
+
+	// });
 
 
 	// ******* //
