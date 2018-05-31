@@ -24,7 +24,11 @@
 			foreach ($result as $row) {
 				$_SESSION['current_user'] = $row['username'];
 			}
-			header('Location: ../index.php');
+			if(isset($_SESSION['cart'])) {
+				header('Location: ../checkout.php');				
+			} else {
+				header('Location: ../index.php');
+			}
 		} 
 	} else if ($rows == 0){
 		echo '

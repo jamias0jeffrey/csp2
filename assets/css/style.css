@@ -12,6 +12,7 @@ main {
 	position: -webkit-sticky;
 	position: sticky;
 	top: -1px;
+	z-index: 99;
 }
 
 #policy {
@@ -71,6 +72,7 @@ main {
 
 table, th, td {
 	border: 1px solid black;
+	margin: 10px;
 }
 
 table {
@@ -84,4 +86,10 @@ th {
 
 td {
 	height: 50px;
+}
+
+/* Checkout */
+
+.form-group {
+	margin: 10px;
 }

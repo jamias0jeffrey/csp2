@@ -261,3 +261,9 @@ function updateFromCart(cartId, price) {
 // 		}
 // 	});
 // }
+
+// Checkout //
+
+// $("#confirmation").on("click", function(){
+// 	var =
+// });

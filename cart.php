@@ -28,6 +28,7 @@
 			<?php
 
 				$total = 0;
+
 				if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
 
 					echo '
@@ -76,6 +77,7 @@
 
 							';
 							$total += $subtotal;
+							$_SESSION['total_price'] = $total;
 						}
 					}
 
@@ -91,7 +93,7 @@
 							if(isset($_SESSION['current_user'])) {
 								echo '
 									<td>
-										<a href="./checkout.php?total='.$total.'" class="btn btn-primary">Checkout</a>
+										<a href="./checkout.php" class="btn btn-primary">Checkout</a>
 									</td>
 								';
 							} else {
@@ -104,6 +106,7 @@
 					echo '
 						</tr>
 						';
+
 
 				} else {
 					echo "<h5>Cart is empty!</h5>";
