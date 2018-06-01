@@ -83,44 +83,49 @@
 					$payment_sql = "SELECT * FROM payments";
 					$payment_sql_result = mysqli_query($conn, $payment_sql);
 
+						echo '
+							<form method="POST" action="./confirmation_page.php">
+						';
+
 					foreach ($checkout_user_result as $user) {
 						extract($user);
 						echo '
-							<div class="form-group">
-								<label for="fullname">Full Name:</label>
-								<input type="text" class="form-control" id="fullname" value="'.$user_fullname.'" readonly>
-							</div>
-							<div class="form-group">
-								<label for="email">Email address:</label>
-								<input type="email" class="form-control" id="email" value="'.$user_email.'" readonly>
-							</div>
-							<div class="form-group">
-								<label for="address">Address:</label>
-								<textarea type="text" class="form-control" id="address" readonly>'.$user_address.'</textarea>
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="ref_number" value="'.$ref_number.'" hidden>
-							</div>
+								<div class="form-group">
+									<label for="fullname">Full Name:</label>
+									<input type="text" class="form-control" id="fullname" value="'.$user_fullname.'" readonly>
+								</div>
+								<div class="form-group">
+									<label for="email">Email address:</label>
+									<input type="email" class="form-control" id="email" value="'.$user_email.'" readonly>
+								</div>
+								<div class="form-group">
+									<label for="address">Address:</label>
+									<textarea type="text" class="form-control" id="address" readonly>'.$user_address.'</textarea>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="ref_number" name="ref_number" value="'.$ref_number.'" hidden>
+								</div>
 						';
 					}
 						echo '
-							<div class="form-group" id="method">
-							<label for="method">Payment Method:</label>
-								<select>
+								<div class="form-group" id="method">
+								<label for="method">Payment Method:</label>
+									<select>
 						';
 
 					foreach ($payment_sql_result as $payments) {
 						extract($payments);
 						echo '
 
-									<option value="'.$payment_method.'">'.$payment_method.'</option>
+										<option value="'.$payment_method.'">'.$payment_method.'</option>
 
 						';
 					}
 						echo '
-								</select>
-							</div>
-							<button class="btn btn-primary" id="confirmation">Submit</button>
+									</select>
+								</div>
+								<button type="submit" class="btn btn-primary" id="confirmation">Submit</button>
+							</form>
 						';
 				?>
 			</div>
