@@ -37,7 +37,7 @@
 
 				<?php
 
-					$total = number_format($_SESSION['total_price']);
+					$total = $_SESSION['total_price'];
 
 
 					foreach ($_SESSION['cart'] as $itemId => $itemQty) {
@@ -61,7 +61,7 @@
 							echo '
 									<tr>
 										<td><strong>Total Price</strong></td>
-										<td>P '.$total.'</td>
+										<td><p id="total_price">P '.$total.'</p></td>
 									</tr>
 								</tbody>
 							';
@@ -75,7 +75,7 @@
 
 				<?php
 					$user = $_SESSION['current_user'];
-					$ref_number = uniqid(time(), True);
+					$ref_number = uniqid(time());
 
 					$checkout_user = "SELECT * FROM users WHERE username = '$user'";
 					$checkout_user_result = mysqli_query($conn, $checkout_user);
@@ -96,7 +96,7 @@
 								</div>
 								<div class="form-group">
 									<label for="email">Email address:</label>
-									<input type="email" class="form-control" id="email" value="'.$user_email.'" readonly>
+									<input type="email" class="form-control" id="email" name="email" value="'.$user_email.'" readonly>
 								</div>
 								<div class="form-group">
 									<label for="address">Address:</label>
@@ -104,6 +104,12 @@
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" id="ref_number" name="ref_number" value="'.$ref_number.'" hidden>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="user_id" name="user_id" value="'.$id.'" hidden>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="total_price" name="total_price" value="'.$total.'" hidden>
 								</div>
 						';
 					}

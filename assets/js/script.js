@@ -265,5 +265,21 @@ function updateFromCart(cartId, price) {
 // Checkout //
 
 // $("#confirmation").on("click", function(){
-// 	var =
+// 	var ref_number = $("#ref_number").val();
+// 	var user = $("#user_name").val();
+// 	var total = $("#total_price").html();
+// 	var user_email = $("#user_email").val();
+
+// 	$.ajax ({
+// 		url: "./lib/confirm.php",
+// 		method: "POST",
+// 		data: {"ref_number":ref_number,
+// 				"user":user,
+// 				"total":total,
+// 				"user_email":user_email},
+// 		success: function() {
+// 			window.location = "./confirmation_page.php";
+// 		}
+
+// 	});
 // });
