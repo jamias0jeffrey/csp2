@@ -92,7 +92,7 @@
 						echo '
 								<div class="form-group">
 									<label for="fullname">Full Name:</label>
-									<input type="text" class="form-control" id="fullname" value="'.$user_fullname.'" readonly>
+									<input type="text" class="form-control" id="fullname" name="fullname" value="'.$user_fullname.'" readonly>
 								</div>
 								<div class="form-group">
 									<label for="email">Email address:</label>
