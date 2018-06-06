@@ -12,7 +12,7 @@ $mail_body){
 	//Sender
 	$email_sender ='jamias0jeffrey@gmail.com';
 	$email_password ='bluRanger12';
-	$from_email = "purefood@puregroup.com";
+	$from_email = "puretech@puregroup.com";
 	$from_name =  "Pure Tech";
 	// //Receiver
 	// $usermail = "oxino.renzchler@gmail.com";
