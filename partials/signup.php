@@ -22,25 +22,25 @@
                         <div class="md-form">
                             <i class="fa fa-user prefix grey-text"></i>
                             <input type="text" id="username" class="form-control" name="username" required>
-                            <label for="username">Enter desire username</label><span id="user_avail"></span>
+                            <label for="username">Username <span id="user_avail"></span></label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-envelope prefix grey-text"></i>
                             <input type="email" id="useremail" class="form-control" name="useremail" required>
-                            <label for="useremail">Enter your email</label><span id="mail_avail"></span>
+                            <label for="useremail">Email <span id="mail_avail"></span></label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-lock prefix grey-text"></i>
                             <input type="password" id="userpassword" class="form-control" name="userpassword" required>
-                            <label for="userpassword">Your password</label><span id="pwlength"></span>
+                            <label for="userpassword">Your password <span id="pwlength"></span></label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-exclamation-triangle prefix grey-text"></i>
                             <input type="password" id="confirmpassword" class="form-control" name="confirmpassword" required>
-                            <label for="confirmpassword">Confirm password</label><span id="match"></span>
+                            <label for="confirmpassword">Confirm password <span id="match"></span></label>
                         </div>
 
                         <div class="form-check">

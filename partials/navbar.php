@@ -1,37 +1,3 @@
-<!--Navbar 1-->
-<nav class="navbar navbar-expand-lg navbar-dark elegant-color">
-
-    <!-- Navbar brand -->
-    <a class="navbar-brand ml-2" href="#">Pure Tech</a>
-    <div class="ml-auto d-none d-md-block">
-        <ul class="navbar-nav ml-auto">
-            <a class="navbar-brand white-text">Our Partners:</a>
-
-            <li class="nav-item">
-                <a class="nav-link partner-links" href="#">Pure Food</a>
-            </li>
-
-            <li class="nav-item partner-links">
-                <a class="nav-link partner-links" href="#">Pure Scents</a>
-            </li>
-
-            <li class="nav-item partner-links">
-                <a class="nav-link partner-links" href="#">Pure Style</a>
-            </li>
-
-            <li class="nav-item partner-links">
-                <a class="nav-link" href="#">Pure Tools</a>
-            </li>
-
-            <li class="nav-item partner-links">
-                <a class="nav-link" href="#">Pure Cafe</a>
-            </li>
-        </ul>
-    </div>
-
-</nav>
-<!-- End of Navbar 1-->
-
 <!-- Navbar 2 -->
 <nav class="navbar navbar-expand-lg navbar-dark primary-color scrolling-navbar" id="mainnav">
 
@@ -97,8 +63,7 @@
 
                                     <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                                         <a class="dropdown-item" href="./account_details.php">Manage Account</a>
-                                        <a class="dropdown-item" href="#">Orders</a>
-                                        <a class="dropdown-item" href="#">Wishlist</a>
+                                        <a class="dropdown-item" href="./order_history.php">Order History</a>
                                         <a class="dropdown-item" href="./lib/session_logout.php">Logout</a>
                                     </div>
                                 </li>

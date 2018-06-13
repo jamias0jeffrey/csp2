@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-	$('#admin_users').DataTable();
+	$(function(){
+		$('#success').fadeOut(3000);
+	});
 
 	// ****** //
 	// signup //
@@ -9,7 +11,7 @@ $(document).ready(function(){
 	$('#signup').prop("disabled", true);
 	
 
-	$('#username').on("keyup", function(){
+	$('#username').on("blur", function(){
 		var username = $(this).val();
 
 		$.ajax({
@@ -23,7 +25,7 @@ $(document).ready(function(){
 	});
 
 
-	$('#useremail').on("keyup", function(){
+	$('#useremail').on("blur", function(){
 		var email = $(this).val();
 
 		$.ajax({
@@ -39,9 +41,9 @@ $(document).ready(function(){
 	$('#userpassword').on("keyup", function(){
 		var pass = $(this).val();
 		if(pass.length < 8 && pass.length > 0){
-			$("#pwlength").html("Password too short");
+			$("#pwlength").html("is too short");
 		} else {
-			$('#pwlength').html("");
+			$('#pwlength').html("✓");
 		}
 	});
 
@@ -50,9 +52,9 @@ $(document).ready(function(){
 		var confirmpword = $('#confirmpassword').val();
 
 		if (pword == confirmpword) {
-			$('#match').html('Password match');
+			$('#match').html('✓');
 		} else {
-			$('#match').html('Password did not match');
+			$('#match').html('did not match');
 		}
 	});
 
@@ -62,10 +64,10 @@ $(document).ready(function(){
 		var pwmsg = $("#pwlength").html();
 		var confmsg = $("#match").html();
 		
-		if ((usermsg == "Name available")
-			&& (emailmsg == "Email available")
-			&& (pwmsg == "")
-			&& (confmsg == "Password match")){
+		if ((usermsg == "✓")
+			&& (emailmsg == "✓")
+			&& (pwmsg == "✓")
+			&& (confmsg == "✓")){
 			$('#signup').prop("disabled", false);
 		} else {
 			$('#signup').prop("disabled", true);

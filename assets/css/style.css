@@ -25,7 +25,9 @@ main {
 
 
 #mail_avail,
-#user_avail {
+#user_avail,
+#pwlength,
+#match {
 	color: red;
 }
 

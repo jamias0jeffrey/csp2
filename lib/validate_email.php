@@ -7,9 +7,9 @@
 		$result = mysqli_query($conn, $query);
 
 		if (mysqli_num_rows($result) > 0) {
-			echo "Email already exist";
+			echo "already in use!";
 		} else {
-			echo "Email available";
+			echo "✓";
 		}
 	}
 ?>

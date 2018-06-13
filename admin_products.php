@@ -141,7 +141,7 @@
 									<td>'.$cat_val['category_name'].'</td>
 									<td><img id="prd_list" src="'.$item_ct_rst1['image'].'"></td> 
 									<td>
-										<a class="btn btn-primary" href="update_products.php?id='.$row['id'].'">Edit</a>
+										<a class="btn btn-primary" href="update_products.php?id='.$item_ct_rst1['id'].'">Edit</a>
 										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete_conf">Delete</button>
 										</td>
 								</tr>';
