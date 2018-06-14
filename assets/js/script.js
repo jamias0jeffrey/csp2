@@ -285,3 +285,22 @@ function updateFromCart(cartId, price) {
 
 // 	});
 // });
+
+// Order History //
+
+function orderlist(id) {
+   // alert(this.id);
+
+	var order_item_list = id;
+
+   $.ajax ({
+
+   	url: "./lib/order_item_list.php",
+   	method: 'POST',
+   	data: {"order_item_list":order_item_list},
+   	success: function(data) {
+   		$('#itemlist').html(data);
+   	}
+
+   });
+}

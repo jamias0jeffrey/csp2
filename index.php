@@ -17,6 +17,12 @@
 		require_once "partials/navbar.php";
 	?>
 
+	<?php
+    	if (@($_GET['success'] == true)) {
+    		echo "<p id = 'success'>Registration Successfull. You may now login your account</p>";
+    	}
+    	
+    ?>
 
 	<main class="wrapperIndex">
 		
