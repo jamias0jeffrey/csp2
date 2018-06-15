@@ -51,7 +51,9 @@
 								<img class="card-img-top" src="'.$image.'" alt="Card image">
 								<div class="card-body">
 									<h5>'.$product_name.'</h5>
-									<p>P '.$price.'</p>
+									<lable for="price">Price: </label>
+									<p id="price">P '.$price.'</p>
+									<label for="quantity'.$id.'">Quantity: </label>
 									<input type="number" value="1" min="1" id="quantity'.$id.'"></input>
 								</div> 
 								<div class="card-footer">
