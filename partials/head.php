@@ -5,9 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
 
-	<title>PureTech - <?php getTitle(); ?></title>
-
-	<!-- Import Bootstrap -->
+	<title>PureTech - <?php getTitle(); ?></title><!-- Import Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
 	<!-- Import MD Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="./assets/css/mdb.min.css">
@@ -17,3 +15,5 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+	

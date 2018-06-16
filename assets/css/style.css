@@ -1,30 +1,13 @@
 main {
 	height: 200vh;
 }
- 
+
+
 .main-header {
   text-align: center;
   margin-bottom: 10px;
 }
 
-#boxes {
-	display: grid;
-	grid-auto-columns: auto, auto, auto;
-	margin: 0 auto;
-}
-
-
-.char_item {
-	width: 280px;
-    padding: 10px;
-    border: 3px solid black;
-    margin: 0;
-}
-
-.char_icon {
-	margin: 10px;
-	padding-right: 10px
-}
 
 
 /* ------------ */
