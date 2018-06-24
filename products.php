@@ -57,7 +57,7 @@
 									<input type="number" value="1" min="1" id="quantity'.$id.'"></input>
 								</div> 
 								<div class="card-footer">
-									<button class"btn btn-primary" onClick="addToCart('.$id.')">Add to cart</button>
+									<button class="buybtn" onClick="addToCart('.$id.')"></button>
 								</div>
 							</div>
 							';
@@ -94,7 +94,7 @@
 											<input type="number" value="1" min="1" id="quantity'.$id.'"></input>
 										</div> 
 										<div class="card-footer">
-											<button class"btn btn-primary" onClick="addToCart('.$id.')">Add to cart</button>
+											<button class="buybtn" onClick="addToCart('.$id.')"></button>
 										</div>
 									</div>
 								';
